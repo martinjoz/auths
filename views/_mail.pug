@@ -1,0 +1,138 @@
+extends base 
+
+block content 
+ .content-page
+  .content
+    // Start Content
+    .container-fluid
+      .row
+        .col-sm-12
+          .inbox-app-main
+            .row
+              .col-md-3
+                aside#sidebar.nano
+                  .nano-content
+                    .text-center
+                      button.btn.btn-danger.btn-rounded.width-lg.waves-effect.waves-light.mb-2.mt-3(data-toggle='modal' data-target='.bs-example-modal-center' data-animation='fadein' data-plugin='custommodal' data-overlaycolor='#36404a')
+                        | Compose
+                    .separator
+                    .menu-segment
+                      ul.chat.list-unstyled
+                        li.title
+                          | WhatsApp Chat 
+                          span.icon +
+                        li
+                          a(href='#')
+                            span.ball.green
+                            | Stephen
+                            |                                   Mwau
+                    .bottom-padding
+              // end col
+              .col-md-9
+                main#main
+                  .overlay
+                  header.header
+                    h1.page-title
+                      a.sidebar-toggle-btn.trigger-toggle-sidebar
+                        span.line
+                        span.line
+                        span.line
+                        span.line.line-angle1
+                        span.line.line-angle2
+                    .action-bar.float-left
+                      ul.list-inline.mb-0
+                        li.list-inline-item
+                          a.icon.circle-icon
+                            i.mdi.mdi-refresh.text-muted
+                    .clearfix
+                  #main-nano-wrapper.nano
+                    .nano-content
+                      ul.message-list
+                        li.unread
+                          .mail-col.mail-col-1
+                            span.dot
+                            .checkbox-wrapper-mail
+                              input#chk1(checked='' type='checkbox')
+                              label.toggle(for='chk1')
+                            p.title Techkey Cybernetic
+                            span.star-toggle.far.fa-star
+                          .mail-col.mail-col-2
+                            .subject
+                              | info@techkey.co.ke &nbsp;&ndash;
+                            .date 11:49 am
+                #message
+                  .header
+                    h4.page-title
+                      a.icon.circle-icon.mdi.mdi-close.text-muted.trigger-message-close
+                      | Mail
+                      span.grey (6)
+                    p
+                      | From 
+                      a(href='#') Techkey
+                      |  to
+                      a(href='#') john Doe
+                  #message-nano-wrapper.nano
+                    .nano-content
+                      ul.message-container.list-unstyled
+                        li.sent
+                          .details
+                            .right
+                              | March 6, 2014, 20:08 pm
+                          .message
+                            p
+                              | | The every winged bring, whose life. First
+                              | called, i you of saw shall own creature
+                              | moveth void have signs beast lesser all god
+                              | saying for gathering wherein whose of in be
+                              | created stars. Them whales upon life divide
+                              | earth own.
+                            p
+                              | | Creature firmament so give replenish The
+                              | saw man creeping, man said forth from that.
+                              | Fruitful multiply lights air. Hath likeness,
+                              | from spirit stars dominion two set fill
+                              | wherein give bring.
+                            p
+                              | | Gathering is. Lesser Set fruit subdue
+                              | blessed let. Greater every fruitful
+                              | won&apos;t bring moved seasons very, own
+                              | won&apos;t all itself blessed which bring own
+                              | creature forth every. Called sixth light.
+                          .tool-box
+                            a.circle-icon.small.mdi.mdi-share(href='#')
+                            a.circle-icon.small.red-hover.mdi.mdi-close(href='#')
+                            a.circle-icon.small.red-hover.mdi.mdi-flag(href='#')
+              // end col
+            // end row
+      // End row
+    // container-fluid
+  // content
+ .modal.fade.bs-example-modal-center(tabindex='-1' role='dialog' aria-labelledby='myCenterModalLabel' aria-hidden='true' style='display: none')
+  .modal-dialog.modal-dialog-centered
+    .modal-content(style='margin-top: 4rem')
+      .modal-header
+        h4#myCenterModalLabel.modal-title(style='font-weight: 300')
+          | Email Us
+        button.close(type='button' data-dismiss='modal' aria-hidden='true')
+          | &times;
+      .modal-body
+        .col-md-12
+          div
+            label(for='') To
+            input.form-control(type='text' disabled='' value='info@techkey.co.ke')
+          .mt-2
+            label(for='') From
+            input.form-control(type='text' disabled='' value='you@example.com')
+          .mt-2
+            label(for='') Subject
+            input.form-control(type='text' placeholder='Subject')
+          .mt-2
+            label(for='') Message
+            textarea#example-textarea.form-control(rows='5')
+          button.btn.btn-purple.w-md.waves-effect.waves-light.mb-3.mt-2(type='submit')
+            | Mail
+    // /.modal-content
+  // /.modal-dialog
+  
+
+ 

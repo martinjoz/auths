@@ -1,0 +1,177 @@
+extends base 
+
+block content 
+ .content-page
+  .content
+    // Start Content
+    .container-fluid
+      br
+      .row
+        .col-xl-3.col-md-6
+          .card-box
+            .dropdown.float-right
+              a.dropdown-toggle.arrow-none.card-drop(href='#' data-toggle='dropdown' aria-expanded='false')
+                i.mdi.mdi-dots-vertical
+              .dropdown-menu.dropdown-menu-right
+                // item
+                a.dropdown-item(href='javascript:void(0);') Register A Domain
+                // item
+                a.dropdown-item(href='javascript:void(0);') Web development
+                // item
+                a.dropdown-item(href='javascript:void(0);') App development
+                // item
+                a.dropdown-item(href='javascript:void(0);') USSD
+            h4.header-title.mt-0.mb-4 Total Services
+            .widget-chart-1
+              .widget-chart-box-1.float-left(dir='ltr')
+                input(data-plugin='knob' data-width='80' data-height='80' data-fgcolor='#f05050 ' data-bgcolor='#F9B9B9' value='0' data-skin='tron' data-angleoffset='180' data-readonly='true' data-thickness='.15')
+              .widget-detail-1.text-right
+                h2.font-weight-normal.pt-2.mb-1 0
+                p.text-muted.mb-1 Active
+        // end col
+        .col-xl-3.col-md-6
+          .card-box
+            .dropdown.float-right
+              a.dropdown-toggle.arrow-none.card-drop(href='#' data-toggle='dropdown' aria-expanded='false')
+                i.mdi.mdi-dots-vertical
+              .dropdown-menu.dropdown-menu-right
+                // item
+                a.dropdown-item(href='javascript:void(0);') Add a Domain
+            h4.header-title.mt-0.mb-3 Domains
+            .widget-box-2
+              .widget-detail-2.text-right
+                span.badge.badge-success.badge-pill.float-left.mt-3
+                  | 0 
+                  i.mdi.mdi-trending-up
+                h2.font-weight-normal.mb-1 0
+                p.text-muted.mb-3 Registered
+              .progress.progress-bar-alt-success.progress-sm
+                .progress-bar.bg-success(role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%')
+        // end col
+        .col-xl-3.col-md-6
+          .card-box
+            .dropdown.float-right
+              a.dropdown-toggle.arrow-none.card-drop(href='#' data-toggle='dropdown' aria-expanded='false')
+                i.mdi.mdi-dots-vertical
+              .dropdown-menu.dropdown-menu-right
+                // item
+                a.dropdown-item(href='invoices.html') View invoice
+                a.dropdown-item(href='javascript:void(0);') Deploy a Project
+            h4.header-title.mt-0.mb-4 Invoice
+            .widget-chart-1
+              .widget-chart-box-1.float-left(dir='ltr')
+                input(data-plugin='knob' data-width='80' data-height='80' data-fgcolor='#ffbd4a' data-bgcolor='#FFE6BA' value='0' data-skin='tron' data-angleoffset='180' data-readonly='true' data-thickness='.15')
+              .widget-detail-1.text-right
+                h3.font-weight-normal.pt-2.mb-1 KSH 0
+                p.text-muted.mb-1 Bill generated 
+        // end col
+        .col-xl-3.col-md-6
+          .card-box
+            .dropdown.float-right
+              a.dropdown-toggle.arrow-none.card-drop(href='#' data-toggle='dropdown' aria-expanded='false')
+                i.mdi.mdi-dots-vertical
+              .dropdown-menu.dropdown-menu-right
+                // item
+                a.dropdown-item(href='javascript:void(0);') Submit a complain
+            h4.header-title.mt-0.mb-3 Support Tickets
+            .widget-box-2
+              .widget-detail-2.text-right
+                span.badge.badge-pink.badge-pill.float-left.mt-3
+                  | 0 
+                  i.mdi.mdi-trending-up
+                h2.font-weight-normal.mb-1 0
+                p.text-muted.mb-3 24/7 support
+              .progress.progress-bar-alt-pink.progress-sm
+                .progress-bar.bg-pink(role='progressbar' aria-valuenow='77' aria-valuemin='0' aria-valuemax='100' style='width: 100%')
+        // end col
+      // end row
+      .row
+        .col-xl-4
+          .card-box
+            h4.header-title.mt-0 Add a Project
+            .widget-chart.text-center
+              ul.list-inline.chart-detail-list.mb-0
+                li.list-inline-item
+                  h5
+                    a(style='color: #ff8acc' href='domain.html')
+                      i.fa.fa-circle.mr-1
+                      | Domain
+                li.list-inline-item
+                  h5(style='color: #5b69bc')
+                    a(style='color: #5b69bc' href='projects.html')
+                      i.fa.fa-circle.mr-1
+                      | Web/App
+                li.list-inline-item
+                  h5
+                    a(style='color: #5b69bc' href='projects.html')
+                      i.fa.fa-circle.mr-1
+                      | USSD
+        // end col
+        .col-xl-8
+          .card-box
+            h4.header-title.mt-0(style='line-height: 2.2;letter-spacing: 1px;')
+              | This dashboard gives you (our client) direct access to our developers and a better and more efficient way of to manage your projects.
+              | Projects ordered through this dashboard get
+              | a
+              span(style='color: #5b69bc')
+                | 10% Discount   
+                i.fa.fa-circle.mr-1
+        // end col
+      // end row
+      .row
+        .col-xl-4
+          .card-box
+            .dropdown.float-right
+              a.dropdown-toggle.arrow-none.card-drop(href='#' data-toggle='dropdown' aria-expanded='false')
+                i.mdi.mdi-dots-vertical
+              .dropdown-menu.dropdown-menu-right
+                // item
+                a.dropdown-item(href='javascript:void(0);') Open inbox
+            h4.header-title.mb-3 Inbox
+            .inbox-widget
+              .inbox-item
+                a(href='mail.html')
+                  .inbox-item-img
+                    img.rounded-circle(src='assets/images/users/user-1.jpg' alt='')
+                  h5.inbox-item-author.mt-0.mb-1 Chadengle
+                  p.inbox-item-text
+                    | Hey! there I&apos;m available...
+                  p.inbox-item-date 13:40 PM
+        // end col
+        .col-xl-8
+          .card-box
+            h4.header-title.mt-0.mb-3  Projects
+            .table-responsive
+              table.table.table-hover.mb-0
+                thead
+                  tr
+                    th #
+                    th Project Name
+                    th Start Date
+                    th Due Date
+                    th Status
+                    th Assign
+                tbody
+                  tr
+                    td 1
+                    td Adminto Admin v1
+                    td 01/01/2017
+                    td 26/04/2017
+                    td
+                      span.badge.badge-danger Released
+                    td Coderthemes
+        // end col
+      // end row
+    // container-fluid
+  // content
+  // Footer Start
+  footer.footer
+    .container-fluid
+      .row
+        .col-md-6
+          | 2021 &copy; Techkey Cybernetics
+        .col-md-6
+          .text-md-right.footer-links.d-none.d-sm-block
+            a(href='javascript:void(0);') Contact Us
+  // end Footer
+

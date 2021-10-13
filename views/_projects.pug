@@ -1,0 +1,112 @@
+extends base 
+
+block content 
+ .content-page
+  .content
+    br
+    // Start Content
+    .container-fluid
+      .row
+        .col-sm-4
+          button.btn.btn-purple.btn-rounded.w-md.waves-effect.waves-light.mb-3(type='button' data-toggle='modal' data-target='.bs-example-modal-lg')
+            i.mdi.mdi-plus
+            |  Create Project
+          a.btn.btn-success.btn-rounded.w-md.waves-effect.waves-light.mb-3.ml-3(href='/invoice')
+            | View Invoice
+        .col-sm-8
+          .project-sort.float-right
+            .project-sort-item
+              form.form-inline
+                .form-group.mr-2
+                  label Stage :
+                  select.form-control.ml-2.form-control-sm
+                    option All
+                    option Completed
+                    option in Progress
+        // end col
+      // end row
+      .row
+        .col-xl-4
+          .card-box.project-box
+            .badge.badge-success.float-right Completed
+            h4.mt-0
+              a.text-dark(href='') New Admin Design
+            p.text-success.text-uppercase.font-13 Web Design
+            ul.list-inline
+              li.list-inline-item.mr-4
+                h4.mb-0 2
+                p.text-muted Developers
+              li.list-inline-item
+                h4.mb-0 0
+                p.text-muted Days
+            .project-members.mb-2
+              h5.float-left.mr-3 Team :
+              .avatar-group
+                a.avatar-group-item(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Mat Helme')
+                  img.rounded-circle.avatar-sm(src='assets/images/users/user-1.jpg' alt='friend')
+                a.avatar-group-item(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Michael Zenaty')
+                  img.rounded-circle.avatar-sm(src='assets/images/users/user-2.jpg' alt='friend')
+                a.avatar-group-item(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='James Anderson')
+                  img.rounded-circle.avatar-sm(src='assets/images/users/user-3.jpg' alt='friend')
+                a.avatar-group-item(href='#' data-toggle='tooltip' data-placement='top' title='' data-original-title='Mat Helme')
+                  img.rounded-circle.avatar-sm(src='assets/images/users/user-4.jpg' alt='friend')
+            h5
+              | Progress 
+              span.text-success.float-right 80%
+            .progress.progress-bar-alt-success.progress-sm
+              .progress-bar.bg-success.progress-animated.wow.animated.animated(role='progressbar' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100' style='\
+              width: 80%;\
+              visibility: visible;\
+              animation-name: animationProgress;\
+              ')
+              // /.progress-bar .progress-bar-danger
+            // /.progress .no-rounded
+        // end col
+        // end row
+      // container-fluid
+    // content
+    // Footer Start
+    footer.footer
+      .container-fluid
+        .row
+          .col-md-6
+            | 2016 - 2020 &copy; Adminto theme by 
+            a(href='') Coderthemes
+          .col-md-6
+            .text-md-right.footer-links.d-none.d-sm-block
+              a(href='javascript:void(0);') About Us
+              a(href='javascript:void(0);') Help
+              a(href='javascript:void(0);') Contact Us
+    // end Footer
+  // ==============================================================
+  // End Page content
+  // ==============================================================
+ .modal.fade.bs-example-modal-lg(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true' style='display: none')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-header
+        h4#myLargeModalLabel.modal-title Project Wizard
+        button.close(type='button' data-dismiss='modal' aria-hidden='true')
+          | &times;
+      .modal-body
+        form(action='')
+          p Provide your project details to get started.
+          select#projectType.custom-select.mt-1(required='')
+            option(value='' selected='') Select a project category
+            option(value='1') Web development
+            option(value='2') Application
+            option(value='3') USSD
+          input#example-input-normal.form-control.mt-2(type='text' required='' name='example-input-normal' placeholder='Project Name')
+          input#example-input-normal.form-control.mt-2(type='number' required='' name='example-input-normal' placeholder='Budget (KSh)')
+          .mt-2
+            input#checkbox1(required='' type='checkbox' data-parsley-multiple='groups' data-parsley-mincheck='2')
+            label(for='checkbox1')
+              | I Agree to Techkey Cybernetic Terms and Policies
+          button.btn.btn-purple.btn-rounded.w-md.waves-effect.waves-light.mb-3.mt-2(type='submit')
+            i.mdi.mdi-plus
+            |  Create Project
+        p
+          | We will contact you for more details as soon as we receive your
+          | project application.
+    // /.modal-content
+  // /.modal-dialog

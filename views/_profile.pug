@@ -1,0 +1,87 @@
+extends base 
+
+block content 
+ .content-page
+  .content
+    br
+    // Start Content
+    .container-fluid
+      .row
+        .col-sm-12
+          .bg-picture.card-box
+            .profile-info-name
+              input#profilePicUpload.dropify(hidden='' type='file')
+              label(style='display: block; cursor: pointer' for='profilePicUpload' title='Upload a profile picture')
+                img.rounded-circle.img-thumbnail.float-left.mr-3(style='height: 200px' src='assets/images/profile.jpg' alt='profile-image')
+              .profile-info-detail.overflow-hidden
+                h3 Your Details
+                input#example-input-normal.form-control.mt-2(type='text' required='' name='example-input-normal' placeholder='Name' value='Alexandra Clarkson')
+                input#example-input-normal.form-control.mt-2(type='email' required='' name='example-input-normal' placeholder='email' value='you@example.com')
+                input#example-input-normal.form-control.mt-2(type='number' required='' name='example-input-normal' placeholder='Name' value='07101111111')
+                ul.social-list.list-inline.mt-3.mb-0
+                  li.list-inline-item
+                    a.social-list-item.border-purple.text-purple(href='javascript: void(0);' title='Save profile')
+                      i.fas.fa-save
+              .clearfix
+          // / meta
+        .col-sm-12
+          .card-box
+            h3 Update your password
+            ul.list-group.mb-0.user-list
+              li.list-group-item
+                input#example-input-normal.form-control(type='password' required='' name='example-input-normal' placeholder='Old password')
+              li.list-group-item
+                input#example-input-normal.form-control(type='password' required='' name='example-input-normal' placeholder='New password')
+              li.list-group-item
+                input#example-input-normal.form-control(type='password' required='' name='example-input-normal' placeholder='Confirm password')
+            div(style='text-align: center')
+              button.btn.btn-purple.btn-rounded.w-md.waves-effect.waves-light.mt-2(type='submit')
+                | Update Password
+      .row
+        .col-sm-12
+          .col-sm-12.p-4(style='text-align: center')
+            p
+              | Your credentials are always secure, encrypted and privately
+              | held by us.
+            hr(style='border-top: 1px solid #2d3beb')
+            button.btn.btn-danger.btn-rounded.w-md.waves-effect.waves-light.mt-2(data-toggle='modal' data-target='.bs-example-modal-center' type='submit')
+              | Delete your Account
+    // container-fluid
+  // content
+  // Footer Start
+  footer.footer
+    .container-fluid
+      .row
+        .col-md-6
+          | 2016 - 2020 &copy; Adminto theme by 
+          a(href='') Coderthemes
+        .col-md-6
+          .text-md-right.footer-links.d-none.d-sm-block
+            a(href='javascript:void(0);') About Us
+            a(href='javascript:void(0);') Help
+            a(href='javascript:void(0);') Contact Us
+  // end Footer
+ .modal.fade.bs-example-modal-center(tabindex='-1' role='dialog' aria-labelledby='myCenterModalLabel' aria-hidden='true' style='display: none')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-header
+        h4#myCenterModalLabel.modal-title(style='color: red; font-weight: 200')
+          svg.bi.bi-trash-fill(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+            path(d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z')
+          |               Delete Your Account!!!
+        button.close(type='button' data-dismiss='modal' aria-hidden='true')
+          | &times;
+      .modal-body
+        p
+          | This Action Cannot be undone, Your Projects and Setup will be lost.
+          .mt-2
+            form(action='')
+              input#example-input-normal.form-control.mt-2(type='password' required='' name='example-input-normal' placeholder='Confirm Your Password')
+              input#checkbox1.mt-2(required='' type='checkbox' data-parsley-multiple='groups' data-parsley-mincheck='2')
+              label(for='checkbox1')
+                | Delete Account and Projects I have.
+              div
+                button.btn.btn-danger.w-md.waves-effect.waves-light.mb-3.mt-2(type='submit')
+                  | Delete
+    // /.modal-content
+  // /.modal-dialog
